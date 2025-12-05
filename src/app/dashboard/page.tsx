@@ -23,7 +23,7 @@ export default function DashboardPage() {
     useEffect(() => {
         async function load() {
             try {
-                const data = await apiFetch('api/auth/me', { method: 'GET' });
+                const data = await apiFetch('/api/auth/me', { method: 'GET' });
                 setUser(data.user);
             } catch (err) {
                 console.log(err);
